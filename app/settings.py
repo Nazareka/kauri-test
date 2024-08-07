@@ -3,8 +3,8 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
 
-    BINANCE_API_KEY: str
-    BINANCE_API_SECRET: str
+    BINANCE_API_KEY: str | None = None
+    BINANCE_API_SECRET: str | None = None
 
     class Config:
         env_file = ".env"
